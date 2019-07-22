@@ -1,0 +1,63 @@
+@import "src/variables.scss";
+
+.d-btn-toggle{
+  cursor: pointer;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  position: relative;
+  font-size: 1em;
+  &:after,
+  &:before{
+    font-size: 1em;
+    content: '';
+    position: absolute;
+    z-index: 2;
+    height: 2px;
+    width: 1.4em;
+    background-color: grey;
+    transition: transform $transitionTime, top $transitionTime, left $transitionTime, width $transitionTime;
+  }
+  &:after{      
+    left: -0.2em;
+    top: .4em;
+    transform: rotate(45deg); 
+  }
+  &:before{     
+    left: -0.2em;
+    top: .4em;
+    transform: rotate(-45deg);
+  } 
+  .d-third{
+    position: absolute;
+    display: inline-block;
+    height: 2px;
+    width: .15em;
+    background-color: grey;
+    left: 45%;
+    top: 45%;
+    transition: width $transitionTime, left $transitionTime;
+    z-index: 10;
+    font-size: 1em;
+  }  
+  
+  &.closed{
+    &:after{      
+      left: 0;
+      top: 10%;
+      transform: rotate(0deg); 
+      width: 1em;
+    }
+    &:before{     
+      left: 0;
+      top: .8em;
+      transform: rotate(0deg);
+      width: 1em;
+    }  
+    .d-third{
+      left: 0;
+      width: 100%;
+      display: inline-block;
+    }
+  }
+}

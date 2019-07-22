@@ -1,0 +1,8 @@
+<nav class="d-main-nav" [class.minimize]="minimized">
+  <div class="d-nav-controls">
+    <app-icon-close (toggle)="handleMainNavToggle($event)" [default]="minimized"></app-icon-close>
+  </div>
+  <div class="d-menu" *ngFor="let item of menu.items">
+    <app-menu-item [item]="item" (itemClick)="handleItemClick($event)"></app-menu-item>
+  </div>
+</nav>

@@ -1,0 +1,24 @@
+@import "src/variables.scss";
+
+:host,
+.app-container{
+  height: 100%;
+  width: 100%;
+}
+
+/*START POSITIONING*/
+.app-container {
+  display: flex;
+  flex-flow: row nowrap;  
+}
+
+@media only screen and (max-device-width: 900px) {
+  .app-container{
+    flex-flow: column nowrap;    
+  }
+}
+/*END POSITIONING*/
+
+
+
+

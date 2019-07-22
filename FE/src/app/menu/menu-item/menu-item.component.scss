@@ -1,0 +1,40 @@
+@import "src/variables.scss";
+
+:host{
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  .d-menu-item{
+    display: flex;
+    flex-flow: row nowrap;
+    overflow: hidden;
+    
+    padding: .5em;
+    height: 2em;
+    color: #eef0f2;
+    .material-icons{
+      margin-right: .5em;
+    }
+    .d-label{
+      opacity: 1;
+      transition: opacity ease-in $transitionTime;
+    }
+    
+    
+    border-left: 4px solid transparent;
+    
+    &.active{
+      background-color: rgba(255,255,255, .1);
+      border-left: 4px solid #eef0f2;
+    }      
+    *{
+      align-self: center;
+    }
+  }
+  &.hidden .d-menu-item{
+      .d-label{
+        opacity: 0;
+      }
+    }
+  
+}

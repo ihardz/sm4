@@ -1,0 +1,21 @@
+:host{
+  flex-grow: 8;
+  display: flex;
+  .d-page {
+    display: flex;  
+    flex-flow: column wrap;
+    align-items: stretch;
+  
+    .d-header {
+      flex: 0 0 2em;
+    }
+  
+    .d-content {
+      flex-grow: 1;
+    }
+  
+    .d-footer {
+      flex: 0 0 2em;
+    }
+  }
+}
